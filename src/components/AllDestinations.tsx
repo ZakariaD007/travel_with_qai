@@ -33,7 +33,7 @@ const AllDestinations: React.FC<AllDestinationsProps> = ({ onSelectCountry, onBa
     {
       country: 'victoria-falls-zimbabwe',
       displayName: 'Victoria Falls, Zimbabwe',
-      src:`${baseUrl}images/vf2.JPG`
+      src:`${baseUrl}images/vf2.jpg`
     },
     {
       country: 'livingstone-lusaka-zambia',

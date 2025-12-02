@@ -23,10 +23,10 @@ const CountryGallery: React.FC<CountryGalleryProps> = ({ country, onBackToGaller
       { src:`${baseUrl}images/singapore4.JPG`, alt: 'Sentosa Island Beach' }
     ],
     'victoria-falls-zimbabwe': [
-      { src:`${baseUrl}images/vf4.JPG`, alt: 'Victoria Falls Main Falls' },
-      { src:`${baseUrl}images/vf2.JPG`, alt: 'Victoria Falls Rainforest' },
-      { src:`${baseUrl}images/vf6.JPG`, alt: 'Zambezi River above Victoria Falls' },
-      { src:`${baseUrl}images/vf3.JPG`, alt: 'Victoria Falls Bridge' }
+      { src:`${baseUrl}images/vf4.jpg`, alt: 'Victoria Falls Main Falls' },
+      { src:`${baseUrl}images/vf2.jpg`, alt: 'Victoria Falls Rainforest' },
+      { src:`${baseUrl}images/vf6.jpg`, alt: 'Zambezi River above Victoria Falls' },
+      { src:`${baseUrl}images/vf3.jpg`, alt: 'Victoria Falls Bridge' }
     ],
     'livingstone-lusaka-zambia': [
       { src:`${baseUrl}images/z1.jpg`, alt: 'Livingstone Town' },
