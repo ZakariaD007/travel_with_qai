@@ -7,6 +7,7 @@ interface GalleryProps {
 }
 
 const Gallery: React.FC<GalleryProps> = ({ onShowAllDestinations }) => {
+  const baseUrl = import.meta.env.BASE_URL ?? '/';
   const galleryItemsRef = useIntersectionObserver(() => {
     const elements = document.querySelectorAll('.gallery-item');
     elements.forEach((el, index) => {
@@ -19,19 +20,19 @@ const Gallery: React.FC<GalleryProps> = ({ onShowAllDestinations }) => {
   const galleryItems = [ 
     {
       country: 'zambia',
-      src:'/public/images/selfie1.jpg',
+      src:`${baseUrl}images/selfie1.jpg`,
       title: 'Zambia',
       description: 'Stunning natural landscapes and safaris'
     },
     {
       country: 'zambia',
-      src:'/public/images/selfie2.jpg',
+      src:`${baseUrl}images/selfie2.jpg`,
       title: 'Zambia',
       description: 'Stunning natural landscapes and safaris'
     },
     {
       country: 'zambia',
-      src:'/public/images/selfie3.jpg',
+      src:`${baseUrl}images/selfie3.jpg`,
       title: 'Zambia',
       description: 'Stunning natural landscapes and safaris'
     },

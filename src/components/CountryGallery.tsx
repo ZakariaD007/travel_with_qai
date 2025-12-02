@@ -8,48 +8,49 @@ interface CountryGalleryProps {
 }
 
 const CountryGallery: React.FC<CountryGalleryProps> = ({ country, onBackToGallery }) => {
+  const baseUrl = import.meta.env.BASE_URL ?? '/';
   const countryImagesData: CountryImagesData = {
     'hong-kong': [
-      { src:'/public/images/disney.jpg', alt: 'Hong Kong Skyline at Night' },
-      { src:'/public/images/shrimp.jpg', alt: 'Victoria Harbour View' },
-      { video:'/public/videos/vid.mp4', poster:'/public/images/hong-kong-3.jpg', alt: 'Hong Kong Street Markets' },
-      { src:'/public/images/nood.jpg', alt: 'The Peak Hong Kong' }
+      { src:`${baseUrl}images/disney.JPG`, alt: 'Hong Kong Skyline at Night' },
+      { src:`${baseUrl}images/shrimp.JPG`, alt: 'Victoria Harbour View' },
+      { video:`${baseUrl}videos/vid.MP4`, poster:`${baseUrl}images/hongkong.webp`, alt: 'Hong Kong Street Markets' },
+      { src:`${baseUrl}images/nood.JPG`, alt: 'The Peak Hong Kong' }
     ],
     singapore: [
-      { src:'/public/images/singapore1.jpg', alt: 'Marina Bay Sands Skyline' },
-      { src:'/public/images/singapore2.jpg', alt: 'Gardens by the Bay' },
-      { src:'/public/images/singapore3.jpg', alt: 'Singapore Chinatown' },
-      { src:'/public/images/singapore4.jpg', alt: 'Sentosa Island Beach' }
+      { src:`${baseUrl}images/singapore1.JPG`, alt: 'Marina Bay Sands Skyline' },
+      { src:`${baseUrl}images/singapore2.JPG`, alt: 'Gardens by the Bay' },
+      { src:`${baseUrl}images/singapore3.JPG`, alt: 'Singapore Chinatown' },
+      { src:`${baseUrl}images/singapore4.JPG`, alt: 'Sentosa Island Beach' }
     ],
     'victoria-falls-zimbabwe': [
-      { src:'/public/images/vf4.jpg', alt: 'Victoria Falls Main Falls' },
-      { src:'/public/images/vf2.jpg', alt: 'Victoria Falls Rainforest' },
-      { src:'/public/images/vf6.jpg', alt: 'Zambezi River above Victoria Falls' },
-      { src:'/public/images/vf3.jpg', alt: 'Victoria Falls Bridge' }
+      { src:`${baseUrl}images/vf4.JPG`, alt: 'Victoria Falls Main Falls' },
+      { src:`${baseUrl}images/vf2.JPG`, alt: 'Victoria Falls Rainforest' },
+      { src:`${baseUrl}images/vf6.JPG`, alt: 'Zambezi River above Victoria Falls' },
+      { src:`${baseUrl}images/vf3.JPG`, alt: 'Victoria Falls Bridge' }
     ],
     'livingstone-lusaka-zambia': [
-      { src:'/public/images/z1.jpg', alt: 'Livingstone Town' },
-      { src:'/public/images/z2.jpg', alt: 'Lusaka City Center' },
-      { src:'/public/images/z5.jpg', alt: 'Zambian Countryside' },
-      { src:'/public/images/z4.jpg', alt: 'Zambian Traditional Village' }
+      { src:`${baseUrl}images/z1.jpg`, alt: 'Livingstone Town' },
+      { src:`${baseUrl}images/z2.jpg`, alt: 'Lusaka City Center' },
+      { src:`${baseUrl}images/z5.jpg`, alt: 'Zambian Countryside' },
+      { src:`${baseUrl}images/z4.jpg`, alt: 'Zambian Traditional Village' }
     ],
     'lombok-indonesia': [
-      { src:'/public/images/pink.jpg', alt: 'Lombok Beautiful Beach' },
-      { src:'/public/images/food.jpg', alt: 'Mount Rinjani Summit' },
-      { src:'/public/images/umbrella.jpg', alt: 'Lombok Waterfalls' },
-      { src:'/public/images/coconut.jpg', alt: 'Traditional Sasak Village' }
+      { src:`${baseUrl}images/pink.jpg`, alt: 'Lombok Beautiful Beach' },
+      { src:`${baseUrl}images/food.jpg`, alt: 'Mount Rinjani Summit' },
+      { src:`${baseUrl}images/umbrella.jpg`, alt: 'Lombok Waterfalls' },
+      { src:`${baseUrl}images/coconut.jpg`, alt: 'Traditional Sasak Village' }
     ],
     'south-africa': [
-      { src:'/public/images/cpt1.jpg', alt: 'Table Mountain Cape Town' },
-      { src:'/public/images/cpt2.jpg', alt: 'Kruger National Park Safari' },
-      { src:'/public/images/cpt3.jpg', alt: 'Garden Route Scenic Beauty' },
-      { src:'/public/images/cpt4.jpg', alt: 'Cape Town Waterfront' }
+      { src:`${baseUrl}images/cpt1.JPG`, alt: 'Table Mountain Cape Town' },
+      { src:`${baseUrl}images/cpt2.JPG`, alt: 'Kruger National Park Safari' },
+      { src:`${baseUrl}images/cpt3.JPG`, alt: 'Garden Route Scenic Beauty' },
+      { src:`${baseUrl}images/cpt4.JPG`, alt: 'Cape Town Waterfront' }
     ],
     'new-zealand': [
-      { src:'/public/images/nz5.jpg', alt: 'Milford Sound Fjord' },
-      { src:'/public/images/nz2.jpg', alt: 'Lake Wanaka Mountain View' },
-      { src:'/public/images/nz3.jpg', alt: 'New Zealand Forest & Waterfalls' },
-      { src:'/public/images/nz4.jpg', alt: 'New Zealand Beach Paradise' }
+      { src:`${baseUrl}images/nz5.JPG`, alt: 'Milford Sound Fjord' },
+      { src:`${baseUrl}images/nz2.JPG`, alt: 'Lake Wanaka Mountain View' },
+      { src:`${baseUrl}images/nz3.JPG`, alt: 'New Zealand Forest & Waterfalls' },
+      { src:`${baseUrl}images/nz4.JPG`, alt: 'New Zealand Beach Paradise' }
     ]
   };
 

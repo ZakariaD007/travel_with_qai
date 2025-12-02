@@ -3,6 +3,7 @@ import React from 'react';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 
 const About: React.FC = () => {
+  const baseUrl = import.meta.env.BASE_URL ?? '/';
   const aboutTextRef = useIntersectionObserver(() => {
     const element = aboutTextRef.current;
     if (element) {
@@ -60,7 +61,7 @@ const About: React.FC = () => {
             }}
           >
             <img 
-              src="public/images/family.jpg" 
+              src={`${baseUrl}images/family.JPG`} 
               alt="My Photo"
               style={{
                 width: '100%',

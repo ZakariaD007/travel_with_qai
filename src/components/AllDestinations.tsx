@@ -7,6 +7,7 @@ interface AllDestinationsProps {
 }
 
 const AllDestinations: React.FC<AllDestinationsProps> = ({ onSelectCountry, onBackToGallery }) => {
+  const baseUrl = import.meta.env.BASE_URL ?? '/';
   // Gallery items with display names and first image
     // Use local images from `src/assets/` if available.
     // Filenames used here (you can adjust to match your actual files):
@@ -17,37 +18,37 @@ const AllDestinations: React.FC<AllDestinationsProps> = ({ onSelectCountry, onBa
     {
       country: 'lombok-indonesia',
       displayName: 'Lombok, Indonesia',
-      src:'/public/images/lombok.webp'
+      src:`${baseUrl}images/lombok.webp`
     },
     {
       country: 'hong-kong',
       displayName: 'Hong Kong, Disney Land',
-      src:'/public/images/castle.jpg'
+      src:`${baseUrl}images/castle.JPG`
     },
     {
       country: 'singapore',
       displayName: 'Singapore',
-      src:'/public/images/singapore.jpg'
+      src:`${baseUrl}images/singapore.jpg`
     },
     {
       country: 'victoria-falls-zimbabwe',
       displayName: 'Victoria Falls, Zimbabwe',
-      src:'/public/images/vf2.jpg'
+      src:`${baseUrl}images/vf2.JPG`
     },
     {
       country: 'livingstone-lusaka-zambia',
       displayName: 'Livingstone & Lusaka, Zambia',
-      src:'/public/images/z3.jpg'
+      src:`${baseUrl}images/z3.jpg`
     },
     {
       country: 'south-africa',
       displayName: 'South Africa',
-      src:'/public/images/cpt5.jpg'
+      src:`${baseUrl}images/cpt5.JPG`
     },
     {
       country: 'new-zealand',
       displayName: 'New Zealand',
-      src:'/public/images/nz1.jpg'
+      src:`${baseUrl}images/nz1.JPG`
     }
   ];
 
