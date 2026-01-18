@@ -1,15 +1,25 @@
-/* global.css - Updated responsive styles */
+/* global.css - Updated with stan-store color palette */
 :root {
-  --primary: #2a9d8f;
-  --secondary: #e9c46a;
-  --accent: #e76f51;
-  --light: #f8f9fa;
-  --dark: #264653;
-  --tropical-green: #2a9d8f;
-  --tropical-yellow: #e9c46a;
-  --tropical-orange: #f4a261;
-  --tropical-red: #e76f51;
-  --tropical-blue: #8ecae6;
+  --stan-store-primary: #927A62;
+  --stan-store-secondary: #fdfaf7;
+  --stan-store-tone1: #e9ded7;
+  --stan-store-tone2: #fbfaf7;
+  --stan-store-primary-text: #000000;
+  --stan-store-secondary-text: #00000088;
+  --stan-store-placeholder-text: #00000088;
+  --stan-store-button-text: #000000;
+  
+  /* Map to existing variable names for compatibility */
+  --primary: var(--stan-store-primary);
+  --secondary: var(--stan-store-secondary);
+  --accent: #927A62; /* Using primary for accent */
+  --light: var(--stan-store-secondary);
+  --dark: #2D2D2D; /* Darker text for contrast */
+  --tropical-green: var(--stan-store-primary);
+  --tropical-yellow: #e9ded7; /* Using tone1 */
+  --tropical-orange: #927A62; /* Using primary */
+  --tropical-red: #7A6240; /* Darker shade of primary */
+  --tropical-blue: #e9ded7; /* Using tone1 */
 }
 
 * {
@@ -24,8 +34,8 @@ html {
 }
 
 body {
-  background-color: var(--light);
-  color: var(--dark);
+  background-color: var(--stan-store-secondary);
+  color: var(--stan-store-primary-text);
   overflow-x: hidden;
 }
 
@@ -43,9 +53,10 @@ section {
   width: 100%;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   font-weight: 700;
   margin-bottom: 20px;
+  color: var(--stan-store-primary-text);
 }
 
 h1 {
@@ -68,7 +79,7 @@ h2:after {
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: var(--tropical-orange);
+  background: var(--stan-store-primary);
   border-radius: 2px;
 }
 
@@ -76,28 +87,30 @@ p {
   line-height: 1.6;
   margin-bottom: 20px;
   font-size: clamp(0.9rem, 2vw, 1rem);
+  color: var(--stan-store-primary-text);
 }
 
 .btn {
   display: inline-block;
   padding: 12px 30px;
-  background: var(--tropical-orange);
-  color: white;
+  background: var(--stan-store-primary);
+  color: var(--stan-store-button-text);
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
   text-align: center;
   font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  background: var(--tropical-red);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  background: var(--stan-store-red); /* Using darker shade */
+  color: white;
 }
 
 /* Animations */
@@ -204,7 +217,7 @@ p {
   }
   
   .floating-element {
-    display: none; /* Hide floating elements on mobile for better performance */
+    display: none;
   }
 }
 

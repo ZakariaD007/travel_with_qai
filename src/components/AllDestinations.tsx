@@ -8,13 +8,7 @@ interface AllDestinationsProps {
 
 const AllDestinations: React.FC<AllDestinationsProps> = ({ onSelectCountry, onBackToGallery }) => {
   const baseUrl = import.meta.env.BASE_URL ?? '/';
-  // Gallery items with display names and first image
-    // Use local images from `src/assets/` if available.
-    // Filenames used here (you can adjust to match your actual files):
-    // lombok-indonesia.jpg, hong-kong.jpg, singapore.jpg,
-    // victoria-falls-zimbabwe.jpg, livingstone-lusaka-zambia.jpg,
-    // south-africa.jpg, new-zealand.jpg
-    const allCountries = [
+  const allCountries = [
     {
       country: 'lombok-indonesia',
       displayName: 'Lombok, Indonesia',
@@ -144,7 +138,8 @@ const AllDestinations: React.FC<AllDestinationsProps> = ({ onSelectCountry, onBa
                 <h3 style={{
                   fontSize: 'clamp(1rem, 3vw, 1.2rem)',
                   marginBottom: '8px',
-                  margin: 0
+                  margin: 0,
+                  color: 'white'
                 }}>
                   {dest.displayName}
                 </h3>
@@ -161,7 +156,7 @@ const AllDestinations: React.FC<AllDestinationsProps> = ({ onSelectCountry, onBa
               padding: '12px 30px',
               fontSize: 'clamp(0.9rem, 2vw, 1rem)',
               backgroundColor: 'var(--tropical-orange)',
-              color: 'white',
+              color: 'var(--stan-store-button-text)',
               border: 'none',
               borderRadius: '25px',
               cursor: 'pointer',
@@ -171,91 +166,18 @@ const AllDestinations: React.FC<AllDestinationsProps> = ({ onSelectCountry, onBa
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.backgroundColor = 'var(--tropical-red)';
+              e.currentTarget.style.color = 'white';
               e.currentTarget.style.transform = 'translateY(-3px)';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.backgroundColor = 'var(--tropical-orange)';
+              e.currentTarget.style.color = 'var(--stan-store-button-text)';
               e.currentTarget.style.transform = 'translateY(0)';
             }}
           >
             ← Back to Main Gallery
           </button>
         </div>
-
-        {/* Responsive Media Queries */}
-        <style>{`
-          @media (max-width: 1024px) {
-            #all-destinations .container {
-              padding: 0 15px;
-            }
-          }
-
-          @media (max-width: 768px) {
-            #all-destinations {
-              padding: 50px 15px;
-            }
-
-            #all-destinations h2 {
-              font-size: clamp(1.5rem, 5vw, 2.5rem);
-              margin-bottom: 30px;
-            }
-
-            #all-destinations .destination-grid {
-              grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-              gap: 15px;
-            }
-
-            #all-destinations .destination-item {
-              height: 220px !important;
-            }
-          }
-
-          @media (max-width: 480px) {
-            #all-destinations {
-              padding: 30px 12px;
-            }
-
-            #all-destinations h2 {
-              font-size: clamp(1.3rem, 6vw, 2rem);
-              margin-bottom: 20px;
-            }
-
-            #all-destinations .destination-grid {
-              grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-              gap: 12px;
-            }
-
-            #all-destinations .destination-item {
-              height: 180px !important;
-              border-radius: 8px !important;
-            }
-
-            #all-destinations button {
-              padding: 10px 20px !important;
-              font-size: 0.9rem !important;
-              min-width: auto !important;
-            }
-          }
-
-          @media (max-width: 320px) {
-            #all-destinations {
-              padding: 20px 10px;
-            }
-
-            #all-destinations h2 {
-              font-size: 1.2rem;
-            }
-
-            #all-destinations .destination-grid {
-              grid-template-columns: 1fr;
-              gap: 10px;
-            }
-
-            #all-destinations .destination-item {
-              height: 150px !important;
-            }
-          }
-        `}</style>
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-// Navbar.tsx
+// Navbar.tsx - Updated colors
 import React, { useState, useEffect } from 'react';
 
 const Navbar: React.FC = () => {
@@ -39,8 +39,8 @@ const Navbar: React.FC = () => {
       zIndex: 1000,
       transition: 'all 0.3s ease',
       ...(scrolled && {
-        background: 'rgba(255,255,255,0.95)',
-        boxShadow: '0 5px 20px rgba(0,0,0,0.1)',
+        background: 'var(--stan-store-secondary)',
+        boxShadow: '0 5px 20px rgba(146, 122, 98, 0.1)',
         padding: '15px 0'
       })
     }}>
@@ -55,10 +55,10 @@ const Navbar: React.FC = () => {
         <a href="#" className="logo" style={{
           fontSize: 'clamp(1.5rem, 4vw, 1.8rem)',
           fontWeight: 700,
-          color: 'var(--tropical-green)',
+          color: 'var(--stan-store-primary)',
           textDecoration: 'none'
         }}>
-          Travelwith<span style={{ color: 'var(--tropical-orange)' }}>qai</span>
+          Travelwith<span style={{ color: 'var(--stan-store-primary)' }}>qai</span>
         </a>
         
         <div 
@@ -67,7 +67,7 @@ const Navbar: React.FC = () => {
             display: isMobile ? 'block' : 'none', 
             fontSize: '1.5rem', 
             cursor: 'pointer',
-            color: scrolled ? 'var(--dark)' : 'white'
+            color: scrolled ? 'var(--stan-store-primary)' : 'white'
           }}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
@@ -83,12 +83,12 @@ const Navbar: React.FC = () => {
             position: 'fixed',
             top: '70px',
             left: 0,
-            background: 'white',
+            background: 'var(--stan-store-secondary)',
             width: '100%',
             flexDirection: 'column',
             alignItems: 'center',
             padding: '20px 0',
-            boxShadow: '0 5px 10px rgba(0,0,0,0.1)',
+            boxShadow: '0 5px 10px rgba(146, 122, 98, 0.1)',
             transition: 'all 0.3s ease'
           })
         }}>
@@ -96,7 +96,7 @@ const Navbar: React.FC = () => {
             <a 
               href="#hero" 
               style={{
-                color: scrolled ? 'var(--dark)' : (isMobile ? 'var(--dark)' : 'white'),
+                color: scrolled ? 'var(--stan-store-primary)' : (isMobile ? 'var(--stan-store-primary)' : 'white'),
                 textDecoration: 'none',
                 fontWeight: 500,
                 transition: 'color 0.3s ease',
@@ -111,7 +111,7 @@ const Navbar: React.FC = () => {
             <a 
               href="#about"
               style={{
-                color: scrolled ? 'var(--dark)' : (isMobile ? 'var(--dark)' : 'white'),
+                color: scrolled ? 'var(--stan-store-primary)' : (isMobile ? 'var(--stan-store-primary)' : 'white'),
                 textDecoration: 'none',
                 fontWeight: 500,
                 transition: 'color 0.3s ease',
@@ -126,7 +126,7 @@ const Navbar: React.FC = () => {
             <a 
               href="#gallery"
               style={{
-                color: scrolled ? 'var(--dark)' : (isMobile ? 'var(--dark)' : 'white'),
+                color: scrolled ? 'var(--stan-store-primary)' : (isMobile ? 'var(--stan-store-primary)' : 'white'),
                 textDecoration: 'none',
                 fontWeight: 500,
                 transition: 'color 0.3s ease',
@@ -141,7 +141,7 @@ const Navbar: React.FC = () => {
             <a 
               href="#contact"
               style={{
-                color: scrolled ? 'var(--dark)' : (isMobile ? 'var(--dark)' : 'white'),
+                color: scrolled ? 'var(--stan-store-primary)' : (isMobile ? 'var(--stan-store-primary)' : 'white'),
                 textDecoration: 'none',
                 fontWeight: 500,
                 transition: 'color 0.3s ease',
