@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
+import Packages from './components/Packages';
 import Gallery from './components/Gallery';
 import AllDestinations from './components/AllDestinations';
 import CountryGallery from './components/CountryGallery';
@@ -32,6 +33,7 @@ const App: React.FC = () => {
       <Navbar />
       <Hero />
       <About />
+      <Packages />
       {currentView === 'gallery' ? (
         <Gallery 
           onShowAllDestinations={handleShowAllDestinations}
